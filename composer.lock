@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c908603372050894c387378074ad58a",
+    "content-hash": "7024aab3dbbd65ad9434befc0bde8cd6",
     "packages": [
         {
             "name": "cyrildewit/eloquent-viewable",
@@ -748,42 +748,46 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.5.2",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
-                "reference": "9f83dded91781a01c63574e387eaa769be769115",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+            },
+            "suggest": {
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -791,12 +795,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -811,7 +836,25 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-04T20:46:45+00:00"
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "intervention/image",
@@ -882,241 +925,6 @@
                 "watermark"
             ],
             "time": "2018-05-29T14:19:03+00:00"
-        },
-        {
-            "name": "ixudra/core",
-            "version": "6.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ixudra/core.git",
-                "reference": "f32f02b01ddd5c2fbc6b922e15e9630f9622b244"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/core/zipball/f32f02b01ddd5c2fbc6b922e15e9630f9622b244",
-                "reference": "f32f02b01ddd5c2fbc6b922e15e9630f9622b244",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "laracasts/presenter": "0.2.*",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Ixudra\\Core\\CoreServiceProvider"
-                    ],
-                    "aliases": {
-                        "Core": "Ixudra\\Core\\Core"
-                    }
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/migrations"
-                ],
-                "psr-4": {
-                    "Ixudra\\Core\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Oris",
-                    "email": "jan.oris@gmail.com"
-                }
-            ],
-            "description": "Custom PHP Core library for the Laravel 5 framework - developed by Ixudra",
-            "homepage": "http://ixudra.be",
-            "keywords": [
-                "Ixudra",
-                "core",
-                "laravel",
-                "project"
-            ],
-            "time": "2017-11-08T10:44:24+00:00"
-        },
-        {
-            "name": "ixudra/imageable",
-            "version": "7.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ixudra/imageable.git",
-                "reference": "e3405f4d10fba2615f5694c6abd49c462ff09beb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/imageable/zipball/e3405f4d10fba2615f5694c6abd49c462ff09beb",
-                "reference": "e3405f4d10fba2615f5694c6abd49c462ff09beb",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "~5.5",
-                "illuminate/support": "~5.5",
-                "ixudra/core": "~6.0",
-                "laracasts/presenter": "0.2.*",
-                "laravelcollective/html": "~5.2",
-                "php": ">=7.0"
-            },
-            "suggest": {
-                "ixudra/translation": "Custom PHP translation library for the Laravel 5 framework"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Ixudra\\Imageable\\ImageableServiceProvider"
-                    ],
-                    "aliases": {
-                        "Imageable": "Ixudra\\Imageable\\Imageable"
-                    }
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/database/migrations"
-                ],
-                "psr-4": {
-                    "Ixudra\\Imageable\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Oris",
-                    "email": "jan.oris@ixudra.be"
-                }
-            ],
-            "description": "Custom Laravel imaging package for the Laravel 5 framework - developed by Ixudra",
-            "homepage": "http://ixudra.be",
-            "keywords": [
-                "Ixudra",
-                "image",
-                "laravel"
-            ],
-            "time": "2017-12-05T19:12:19+00:00"
-        },
-        {
-            "name": "ixudra/portfolio",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ixudra/portfolio.git",
-                "reference": "8cd2b13adda212af9418afa73fc21aaddd37db64"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/portfolio/zipball/8cd2b13adda212af9418afa73fc21aaddd37db64",
-                "reference": "8cd2b13adda212af9418afa73fc21aaddd37db64",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.5",
-                "ixudra/core": "~6.0",
-                "ixudra/imageable": "~7.0",
-                "ixudra/translation": "~5.1",
-                "laracasts/presenter": "0.2.*",
-                "laravelcollective/html": "~5.0",
-                "php": ">=7.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Ixudra\\Portfolio\\PortfolioServiceProvider"
-                    ],
-                    "aliases": {
-                        "Portfolio": "Ixudra\\Portfolio\\Portfolio"
-                    }
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/database/migrations"
-                ],
-                "psr-4": {
-                    "Ixudra\\Portfolio\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Oris",
-                    "email": "jan.oris@gmail.com"
-                }
-            ],
-            "description": "Custom PHP Portfolio library for the Laravel 5 framework - developed by Ixudra",
-            "homepage": "http://ixudra.be",
-            "keywords": [
-                "Ixudra",
-                "laravel",
-                "portfolio",
-                "project"
-            ],
-            "time": "2017-09-05T12:29:00+00:00"
-        },
-        {
-            "name": "ixudra/translation",
-            "version": "5.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ixudra/translation.git",
-                "reference": "a64e666f250787614a7ca7c9f46ba92dc9b94ba7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ixudra/translation/zipball/a64e666f250787614a7ca7c9f46ba92dc9b94ba7",
-                "reference": "a64e666f250787614a7ca7c9f46ba92dc9b94ba7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "illuminate/translation": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ixudra\\Translation\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Oris",
-                    "email": "jan.oris@ixudra.be"
-                }
-            ],
-            "description": "Custom PHP translation library for the Laravel 5 framework - developed by Ixudra",
-            "homepage": "http://ixudra.be",
-            "keywords": [
-                "Ixudra",
-                "laravel",
-                "translation"
-            ],
-            "time": "2017-02-09T14:52:31+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1254,52 +1062,6 @@
                 "php crawler detect"
             ],
             "time": "2019-03-04T19:10:41+00:00"
-        },
-        {
-            "name": "laracasts/presenter",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laracasts/Presenter.git",
-                "reference": "b284f3137f990efd6e95df49d254f1ccc4541e92"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/Presenter/zipball/b284f3137f990efd6e95df49d254f1ccc4541e92",
-                "reference": "b284f3137f990efd6e95df49d254f1ccc4541e92",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpspec/phpspec": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Laracasts\\Presenter": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeffrey Way",
-                    "email": "jeffrey@laracasts.com"
-                }
-            ],
-            "description": "Simple view presenters",
-            "keywords": [
-                "laravel",
-                "presenter",
-                "view"
-            ],
-            "time": "2014-09-13T13:18:07+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2840,6 +2602,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -3013,24 +2778,24 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa"
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
             },
             "type": "library",
             "autoload": {
@@ -3049,7 +2814,11 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2016-02-11T07:05:27+00:00"
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -6254,7 +6023,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3"
+        "php": "^7.1.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
